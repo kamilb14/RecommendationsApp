@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecommendationsApp", "RecommendationsApp\RecommendationsApp.csproj", "{921BA727-B529-4AD5-A8EC-04ACC66F044B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{921BA727-B529-4AD5-A8EC-04ACC66F044B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{921BA727-B529-4AD5-A8EC-04ACC66F044B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{921BA727-B529-4AD5-A8EC-04ACC66F044B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{921BA727-B529-4AD5-A8EC-04ACC66F044B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97152EC6-8DB8-4D12-AAA0-433DFDE5A3D4}
+	EndGlobalSection
+EndGlobal
