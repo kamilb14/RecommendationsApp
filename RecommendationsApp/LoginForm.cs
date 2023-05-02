@@ -7,16 +7,59 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Security.Cryptography.X509Certificates;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace RecommendationsApp
 {
     public partial class LoginForm : Form
     {
+
+        DataBase database = new DataBase();
         public LoginForm()
         {
             InitializeComponent();
-
+            StartPosition = FormStartPosition.CenterScreen;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Registration registration= new Registration();
+            this.Hide();
+            registration.ShowDialog();
+        }
+
+        public static string email;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            email = UserEmailTB.Text;
+            textBox2.UseSystemPasswordChar = true;
+            var password = textBox2.Text;
+
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+
+            DataTable dt = new DataTable();
+
+            string querystring = $"select User_ID, Email, Password from dbo.Users where Email = '{email}' and Password = {password}";
+            SqlCommand command = new SqlCommand(querystring, database.getConnection());
+
+            sqlDataAdapter.SelectCommand = command;
+            sqlDataAdapter.Fill(dt);
+
+            if (dt.Rows.Count == 1)
+            {
+                MessageBox.Show("Вход выполнен!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MainForm mainform = new MainForm();
+                this.Hide();
+                mainform.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Такого аккаунта не существует!", "Не существует!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
 
 
 
@@ -62,6 +105,8 @@ namespace RecommendationsApp
             this.Hide();
             mf.ShowDialog();
         }
+
+       
     }
 }
    
