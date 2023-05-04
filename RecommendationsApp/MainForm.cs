@@ -32,11 +32,12 @@ namespace RecommendationsApp
             listBox1.DrawMode = DrawMode.OwnerDrawFixed;
             listBox1.ItemHeight = 70;
             listBox1.DrawItem += listBox1_DrawItem;
+            textBox1.TextChanged += textBox1_TextChanged;
         }
 
-        
 
 
+        public List<Games> listofgames = new List<Games>();
 
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -207,23 +208,17 @@ namespace RecommendationsApp
             }
 
             listBox1.DataSource = listofgames;
-
-
-            string sql = "SELECT * FROM Collection";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            for (int i = 0; i < listofgames.Count; i++)
             {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand(sql, connection);
-                cmd.CommandType = CommandType.Text;
-                DataTable table1 = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(table1);
-                comboBox1.DisplayMember = "CollectionName";
-                comboBox1.ValueMember = "ID";
-                comboBox1.DataSource = table1;
+                Games gm = new Games();
+                gm = listofgames[i];
+                listBox1.Items.Add(gm);
+            }
 
 
-            }   } 
+
+
+        } 
 
         private void listBox1_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -283,7 +278,33 @@ namespace RecommendationsApp
             t.SetToolTip(pictureBox5, "Поиск");
         }
 
-        
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                for (int i = 0; i < listofgames.Count; i++)
+                {
+                    Games gm = new Games();
+                    gm = listofgames[i];
+                    listBox1.Items.Add(gm);
+                }
+            }
+            else
+            {
+                for (int i = 0; i < listofgames.Count; i++)
+                {
+                    Games gm = new Games();
+                    gm = listofgames[i];
+                    if (gm.Name.StartsWith(textBox1.Text))
+                    {
+                        listBox1.Items.Add(gm);
+                    }
+
+                }
+
+            }
+        }
 
     }
 }
