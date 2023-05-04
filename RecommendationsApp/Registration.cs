@@ -186,10 +186,6 @@ namespace RecommendationsApp
 
 
 
-
-
-
-
             string queryregistration = $" insert into Users( FirstName, LastName, Email, Password, Genre_ID, Year_ID, Price_ID, Age_ID, Gamepad_ID) values ('{firstname}', '{lastname}', '{email}', '{password}', '{a}', '{b}', '{c}', '{d}', '{h}')";
             SqlCommand command = new SqlCommand(queryregistration, dataBase.getConnection());
 
@@ -230,6 +226,13 @@ namespace RecommendationsApp
             {
                 return false;
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm login = new LoginForm();
+            login.ShowDialog();
         }
     }
 

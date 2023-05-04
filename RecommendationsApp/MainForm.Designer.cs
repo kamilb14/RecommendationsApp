@@ -89,6 +89,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 15;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.MouseEnter += new System.EventHandler(this.pictureBox5_MouseEnter);
             // 
             // pictureBox4
             // 
@@ -113,6 +114,8 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter);
             // 
             // pictureBox1
             // 
@@ -163,6 +166,9 @@
             this.comboBox6.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox6.ForeColor = System.Drawing.Color.DarkGray;
             this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            "Да",
+            "Нет"});
             this.comboBox6.Location = new System.Drawing.Point(28, 510);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(276, 39);
@@ -174,6 +180,18 @@
             this.comboBox5.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox5.ForeColor = System.Drawing.Color.DarkGray;
             this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "0",
+            "499",
+            "999",
+            "1499",
+            "1999",
+            "2499",
+            "2999",
+            "3499",
+            "3999",
+            "4499",
+            "4999"});
             this.comboBox5.Location = new System.Drawing.Point(28, 447);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(276, 39);
@@ -185,6 +203,11 @@
             this.comboBox4.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox4.ForeColor = System.Drawing.Color.DarkGray;
             this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "6",
+            "12",
+            "16",
+            "18"});
             this.comboBox4.Location = new System.Drawing.Point(28, 386);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(276, 39);
@@ -196,22 +219,43 @@
             this.comboBox3.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox3.ForeColor = System.Drawing.Color.DarkGray;
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022"});
             this.comboBox3.Location = new System.Drawing.Point(28, 327);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(276, 39);
             this.comboBox3.TabIndex = 4;
-            this.comboBox3.Text = " Поджанр";
+            this.comboBox3.Text = " Год выпуска";
             // 
             // comboBox2
             // 
             this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox2.ForeColor = System.Drawing.Color.DarkGray;
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Приключения",
+            "Действие",
+            "Симулятор ",
+            "Стратегия",
+            "Головоломка",
+            "Ролевая игра",
+            "Выживание"});
             this.comboBox2.Location = new System.Drawing.Point(28, 263);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(276, 39);
             this.comboBox2.TabIndex = 3;
-            this.comboBox2.Text = "Жанр";
             // 
             // label2
             // 

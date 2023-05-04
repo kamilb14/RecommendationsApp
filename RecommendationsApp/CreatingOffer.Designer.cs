@@ -71,7 +71,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(314, 39);
             this.comboBox2.TabIndex = 2;
-            this.comboBox2.Text = "Поджанр";
+            this.comboBox2.Text = "Год выпуска";
             // 
             // comboBox3
             // 
@@ -129,6 +129,7 @@
             this.label3.Size = new System.Drawing.Size(42, 32);
             this.label3.TabIndex = 7;
             this.label3.Text = "←";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button1
             // 

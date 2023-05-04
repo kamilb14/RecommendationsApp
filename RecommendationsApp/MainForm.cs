@@ -15,6 +15,7 @@ namespace RecommendationsApp
         public MainForm()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
             listBox1.DrawMode = DrawMode.OwnerDrawFixed;
             listBox1.ItemHeight = 70;
             listBox1.DrawItem += listBox1_DrawItem;
@@ -94,6 +95,25 @@ namespace RecommendationsApp
             e.Graphics.DrawString(dataItem.Item2, roomsFont, roomsBrush, e.Bounds.Left + 3, e.Bounds.Top + 24);
 
             e.Graphics.DrawString(dataItem.Item3, priceFont, Brushes.WhiteSmoke, e.Bounds.Left + 500, e.Bounds.Top + 38);
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CreatingOffer creatingOffer= new CreatingOffer();
+            creatingOffer.ShowDialog();
+        }
+
+        private void pictureBox3_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip t = new ToolTip();
+            t.SetToolTip(pictureBox3, "Добавить предложение");
+        }
+
+        private void pictureBox5_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip t = new ToolTip();
+            t.SetToolTip(pictureBox5, "Поиск");
         }
     }
 }
