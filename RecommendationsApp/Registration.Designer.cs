@@ -47,12 +47,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(38)))), ((int)(((byte)(53)))));
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.comboBox5);
@@ -101,6 +111,7 @@
             // 
             // comboBox5
             // 
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox5.ForeColor = System.Drawing.Color.DimGray;
             this.comboBox5.FormattingEnabled = true;
@@ -118,28 +129,28 @@
             "2020",
             "2021",
             "2022"});
-            this.comboBox5.Location = new System.Drawing.Point(310, 496);
+            this.comboBox5.Location = new System.Drawing.Point(310, 502);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(208, 30);
             this.comboBox5.TabIndex = 12;
-            this.comboBox5.Text = "Год выпуска";
             // 
             // comboBox4
             // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox4.ForeColor = System.Drawing.Color.DimGray;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "Да",
             "Нет"});
-            this.comboBox4.Location = new System.Drawing.Point(310, 432);
+            this.comboBox4.Location = new System.Drawing.Point(310, 443);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(208, 30);
             this.comboBox4.TabIndex = 11;
-            this.comboBox4.Text = "Поддержка геймпада";
             // 
             // comboBox3
             // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox3.ForeColor = System.Drawing.Color.DimGray;
             this.comboBox3.FormattingEnabled = true;
@@ -155,14 +166,14 @@
             "3999",
             "4499",
             "4999"});
-            this.comboBox3.Location = new System.Drawing.Point(60, 555);
+            this.comboBox3.Location = new System.Drawing.Point(60, 561);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(213, 30);
             this.comboBox3.TabIndex = 10;
-            this.comboBox3.Text = "Ценовая категория";
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox2.ForeColor = System.Drawing.Color.DimGray;
             this.comboBox2.FormattingEnabled = true;
@@ -171,14 +182,14 @@
             "12",
             "16",
             "18"});
-            this.comboBox2.Location = new System.Drawing.Point(60, 496);
+            this.comboBox2.Location = new System.Drawing.Point(60, 502);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(213, 30);
             this.comboBox2.TabIndex = 9;
-            this.comboBox2.Text = "Возрастная категория";
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.ForeColor = System.Drawing.Color.DimGray;
             this.comboBox1.FormattingEnabled = true;
@@ -190,11 +201,10 @@
             "Головоломка",
             "Ролевая игра",
             "Выживание"});
-            this.comboBox1.Location = new System.Drawing.Point(60, 432);
+            this.comboBox1.Location = new System.Drawing.Point(60, 443);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(213, 30);
             this.comboBox1.TabIndex = 8;
-            this.comboBox1.Text = "Жанр";
             // 
             // label5
             // 
@@ -312,6 +322,56 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "X";
             // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label9.Location = new System.Drawing.Point(59, 417);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(100, 23);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Жанр";
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label10.Location = new System.Drawing.Point(308, 417);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(212, 25);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Поддержка геймпада";
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label11.Location = new System.Drawing.Point(59, 476);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(210, 23);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Возрастная категория";
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label12.Location = new System.Drawing.Point(59, 535);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(193, 23);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Ценовая категория";
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label13.Location = new System.Drawing.Point(308, 476);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(138, 23);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "Год выпуска";
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -354,5 +414,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }

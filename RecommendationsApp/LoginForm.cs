@@ -101,12 +101,15 @@ namespace RecommendationsApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MainForm mf = new MainForm();
-            this.Hide();
-            mf.ShowDialog();
+           
+
         }
 
-       
+        public int test(int i, int b)
+        {
+            return i + b;
+        }
+
     }
 }
    

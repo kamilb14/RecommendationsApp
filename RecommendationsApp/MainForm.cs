@@ -254,7 +254,7 @@ namespace RecommendationsApp
         private void pictureBox3_MouseEnter(object sender, EventArgs e)
         {
             ToolTip t = new ToolTip();
-            t.SetToolTip(pictureBox3, "Добавить предложение");
+            t.SetToolTip(pictureBox3, "Добавить игру");
         }
 
         private void pictureBox5_MouseEnter(object sender, EventArgs e)

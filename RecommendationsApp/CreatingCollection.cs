@@ -12,9 +12,13 @@ namespace RecommendationsApp
 {
     public partial class CreatingCollection : Form
     {
+        
         public CreatingCollection()
         {
             InitializeComponent();
+            
         }
+
+        
     }
 }

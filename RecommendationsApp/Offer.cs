@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace RecommendationsApp
 {
-    internal class Games
+    public class Offer
     {
+        public string Email;
+        public string Name;
+
 
     }
 }

@@ -32,6 +32,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -63,7 +64,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.label1.Location = new System.Drawing.Point(128, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 26);
+            this.label1.Size = new System.Drawing.Size(195, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Название подборки";
             // 
@@ -78,12 +79,22 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "←";
             // 
+            // label3
+            // 
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(38)))), ((int)(((byte)(53)))));
+            this.label3.Location = new System.Drawing.Point(88, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(264, 23);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "label3";
+            // 
             // CreatingCollection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(38)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(462, 310);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -91,6 +102,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreatingCollection";
             this.Text = "CreatingCollection";
+           
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,5 +114,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

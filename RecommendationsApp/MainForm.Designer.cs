@@ -45,6 +45,11 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -132,6 +137,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(38)))), ((int)(((byte)(53)))));
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.comboBox6);
             this.panel2.Controls.Add(this.comboBox5);
@@ -163,20 +173,21 @@
             // 
             // comboBox6
             // 
+            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox6.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox6.ForeColor = System.Drawing.Color.DarkGray;
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Items.AddRange(new object[] {
             "Да",
             "Нет"});
-            this.comboBox6.Location = new System.Drawing.Point(28, 510);
+            this.comboBox6.Location = new System.Drawing.Point(28, 513);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(276, 39);
             this.comboBox6.TabIndex = 7;
-            this.comboBox6.Text = "Поддержка геймпада";
             // 
             // comboBox5
             // 
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox5.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox5.ForeColor = System.Drawing.Color.DarkGray;
             this.comboBox5.FormattingEnabled = true;
@@ -192,14 +203,14 @@
             "3999",
             "4499",
             "4999"});
-            this.comboBox5.Location = new System.Drawing.Point(28, 447);
+            this.comboBox5.Location = new System.Drawing.Point(28, 445);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(276, 39);
             this.comboBox5.TabIndex = 6;
-            this.comboBox5.Text = "Ценовая категория";
             // 
             // comboBox4
             // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox4.ForeColor = System.Drawing.Color.DarkGray;
             this.comboBox4.FormattingEnabled = true;
@@ -208,14 +219,14 @@
             "12",
             "16",
             "18"});
-            this.comboBox4.Location = new System.Drawing.Point(28, 386);
+            this.comboBox4.Location = new System.Drawing.Point(28, 377);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(276, 39);
             this.comboBox4.TabIndex = 5;
-            this.comboBox4.Text = "Возрастная категория";
             // 
             // comboBox3
             // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox3.ForeColor = System.Drawing.Color.DarkGray;
             this.comboBox3.FormattingEnabled = true;
@@ -233,14 +244,14 @@
             "2020",
             "2021",
             "2022"});
-            this.comboBox3.Location = new System.Drawing.Point(28, 327);
+            this.comboBox3.Location = new System.Drawing.Point(28, 309);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(276, 39);
             this.comboBox3.TabIndex = 4;
-            this.comboBox3.Text = " Год выпуска";
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox2.ForeColor = System.Drawing.Color.DarkGray;
             this.comboBox2.FormattingEnabled = true;
@@ -252,7 +263,7 @@
             "Головоломка",
             "Ролевая игра",
             "Выживание"});
-            this.comboBox2.Location = new System.Drawing.Point(28, 263);
+            this.comboBox2.Location = new System.Drawing.Point(28, 241);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(276, 39);
             this.comboBox2.TabIndex = 3;
@@ -262,7 +273,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label2.Location = new System.Drawing.Point(34, 208);
+            this.label2.Location = new System.Drawing.Point(34, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(207, 39);
             this.label2.TabIndex = 2;
@@ -301,6 +312,56 @@
             this.listBox1.Size = new System.Drawing.Size(768, 656);
             this.listBox1.TabIndex = 2;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label3.Location = new System.Drawing.Point(36, 215);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(175, 23);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Жанр";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label4.Location = new System.Drawing.Point(36, 283);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(175, 23);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Год выпуска";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label5.Location = new System.Drawing.Point(36, 351);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(205, 23);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Возрастная категория";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label6.Location = new System.Drawing.Point(36, 419);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(175, 23);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Ценовая категория";
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label7.Location = new System.Drawing.Point(36, 487);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(205, 23);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Поддержка геймпада";
             // 
             // MainForm
             // 
@@ -345,5 +406,10 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }
