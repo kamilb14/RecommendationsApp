@@ -30,12 +30,58 @@ namespace RecommendationsApp
             registration.ShowDialog();
         }
 
+        public void CheckEmail(int i)
+        {
+            if (i == 1)
+            {
+                MessageBox.Show("Вход выполнен!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MainForm mainform = new MainForm();
+                this.Hide();
+                mainform.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Такого аккаунта не существует!", "Не существует!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                throw new ArgumentException("Такого аккаунта не существует");
+            }
+        }
+
+        public string Email(string str)
+        {
+            if (str != null)
+            {
+                string m = str;
+                return str;
+            }
+            else
+            {
+                MessageBox.Show("Введите валидный Email");
+                throw new ArgumentException("Введите валидный email");
+            }
+
+        }
+
+        public string Password(string str)
+        {
+            if (str != null)
+            {
+                string m = str;
+                return str;
+            }
+            else
+            {
+                MessageBox.Show("Введите валидный пароль");
+                throw new ArgumentException("Введите валидный пароль");
+            }
+
+        }
+
         public static string email;
         private void button1_Click(object sender, EventArgs e)
         {
-            email = UserEmailTB.Text;
+            email = Email(UserEmailTB.Text);
             textBox2.UseSystemPasswordChar = true;
-            var password = textBox2.Text;
+            var password = Password(textBox2.Text);
 
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
 
@@ -47,17 +93,9 @@ namespace RecommendationsApp
             sqlDataAdapter.SelectCommand = command;
             sqlDataAdapter.Fill(dt);
 
-            if (dt.Rows.Count == 1)
-            {
-                MessageBox.Show("Вход выполнен!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MainForm mainform = new MainForm();
-                this.Hide();
-                mainform.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Такого аккаунта не существует!", "Не существует!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            int i = dt.Rows.Count;
+            CheckEmail(i);
+
         }
 
 

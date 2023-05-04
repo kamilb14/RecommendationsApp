@@ -22,6 +22,35 @@ namespace RecommendationsApp
             StartPosition = FormStartPosition.CenterScreen;
         }
 
+        public int SelectedItemChange(string i)
+        {
+            switch (i)
+            {
+                case "Приключения":
+                    return 1;
+
+                case "Действие":
+                    return 2;
+
+                case "Симулятор":
+                    return 3;
+
+                case "Стратегия":
+                    return 4;
+
+                case "Головоломка":
+                    return 5;
+
+                case "Ролевая игра":
+                    return 6;
+
+                case "Выживание":
+                    return 7;
+
+            }
+            return 0;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -38,38 +67,9 @@ namespace RecommendationsApp
             var email = textBox2.Text;
             var password = textBox4.Text;
 
-            int a = 0;
-            switch(comboBox1.SelectedItem)
-            {
-                case "Приключения":
-                    a= 1;
-                    break;
-
-                case "Действие":
-                    a= 2;
-                    break;
-
-                case "Симулятор":
-                    a= 3;
-                    break;
-
-                case "Стратегия":
-                    a= 4;
-                    break;
-
-                case "Головоломка":
-                    a= 5;
-                    break;
-
-                case "Ролевая игра":
-                    a= 6;
-                    break;
-
-                case "Выживание":
-                    a= 7;
-                    break;
-
-            }
+            //int a = 0;
+            string i = comboBox1.SelectedItem.ToString();
+            int a = SelectedItemChange(i);
 
 
             int b = 0;
@@ -183,9 +183,6 @@ namespace RecommendationsApp
                     break;
             }
 
-
-
-
             string queryregistration = $" insert into Users( FirstName, LastName, Email, Password, Genre_ID, Year_ID, Price_ID, Age_ID, Gamepad_ID) values ('{firstname}', '{lastname}', '{email}', '{password}', '{a}', '{b}', '{c}', '{d}', '{h}')";
             SqlCommand command = new SqlCommand(queryregistration, dataBase.getConnection());
 
@@ -204,9 +201,26 @@ namespace RecommendationsApp
             dataBase.closeConnetion();
         }
 
+        public string Email(string str)
+        {
+            if(str != null)
+            {
+                string m = str;
+                return str;
+            }
+            else
+            {
+                MessageBox.Show("Введите валидный Email");
+                throw new ArgumentException("Введите валидный email");
+            }
+
+        }
+
         private Boolean CheckingUser()
         {
-            var email = textBox2.Text;
+            //var email = textBox2.Text;
+
+            var email = Email(textBox2.Text);
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
