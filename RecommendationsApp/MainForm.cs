@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace RecommendationsApp
 {
@@ -33,6 +34,9 @@ namespace RecommendationsApp
             listBox1.DrawItem += listBox1_DrawItem;
         }
 
+        
+
+
 
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -52,13 +56,13 @@ namespace RecommendationsApp
                 SqlCommand command = new SqlCommand(sqlExpression, connection);
                 SqlDataReader reader = command.ExecuteReader();
 
-                if (reader.HasRows) 
+                if (reader.HasRows)
                 {
                     while (reader.Read()) // построчно считываем данные
                     {
                         Games gm = new Games();
                         gm.Id = Convert.ToInt32(reader.GetValue(0));
-                        switch(Convert.ToInt32(reader.GetValue(1)))
+                        switch (Convert.ToInt32(reader.GetValue(1)))
                         {
                             case 1:
                                 gm.Genre = "приключения";
@@ -203,7 +207,23 @@ namespace RecommendationsApp
             }
 
             listBox1.DataSource = listofgames;
-        }
+
+
+            string sql = "SELECT * FROM Collection";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                cmd.CommandType = CommandType.Text;
+                DataTable table1 = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(table1);
+                comboBox1.DisplayMember = "CollectionName";
+                comboBox1.ValueMember = "ID";
+                comboBox1.DataSource = table1;
+
+
+            }   } 
 
         private void listBox1_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -213,7 +233,7 @@ namespace RecommendationsApp
             if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
             {
                 e = new DrawItemEventArgs(e.Graphics, e.Font, e.Bounds,
-                    e.Index, e.State ^ DrawItemState.Selected, e.ForeColor, Color.FromArgb(42,41,51)) ;
+                    e.Index, e.State ^ DrawItemState.Selected, e.ForeColor, Color.FromArgb(42, 41, 51));
 
                 roomsBrush = Brushes.Gray;
             }
@@ -247,7 +267,7 @@ namespace RecommendationsApp
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CreatingOffer creatingOffer= new CreatingOffer();
+            CreatingOffer creatingOffer = new CreatingOffer();
             creatingOffer.ShowDialog();
         }
 
@@ -262,5 +282,8 @@ namespace RecommendationsApp
             ToolTip t = new ToolTip();
             t.SetToolTip(pictureBox5, "Поиск");
         }
+
+        
+
     }
 }
